@@ -2,10 +2,14 @@
   "name": "webpack_5",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=5"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "tsc --project \"./src\" --noEmit && eslint -c .eslintrc.js --ext .tsx? ./src",
-    "serve": "cross-env webpack serve --hot --config ./webpack/webpack.dev.js --color --progress",
+    "start": "cross-env webpack serve --hot --config ./webpack/webpack.dev.js --color --progress",
     "dev": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.dev.js --color --progress",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.prod.js --color --progress",
     "analyzer": "cross-env NODE_ENV=production webpack --config ./webpack/analyzer.js --profile --progress"
@@ -23,19 +27,16 @@
     ]
   },
   "browserslist": [
-    "last 3 chrome versions",
-    "last 3 firefox versions",
-    "last 3 safari versions",
-    "last 3 edge versions"
+    "last 2 versions",
+    "> 1%",
+    "IE 11"
   ],
   "author": "",
   "license": "ISC",
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "*.less"
   ],
-  "engines": {
-    "node": ">=12.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
