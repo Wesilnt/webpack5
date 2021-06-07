@@ -1,0 +1,11 @@
+/.test/**
+/dist/**
+/test/**
+**/*{.,-}min.js
+images/*
+assets/*
+#node_modules/*
+**/node_modules/*
+stylesheets/*
+vendor/*
+docs/*
